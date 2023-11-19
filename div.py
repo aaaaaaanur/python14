@@ -2,7 +2,7 @@ def summ(a, b):
     if a >= b:
         return 0
 
-
+# сложить все четные числа, которые не заканчиваются на 6
     sum1 = 0
     for i in range(a, b + 1):
         if i % 2 == 0 and i % 10 != 6:
