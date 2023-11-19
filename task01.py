@@ -1,22 +1,13 @@
-# a = 20, b = 24
-# сложить из промежутка все числа, цифры в которых не повторяются
 def summ(a, b):
-    list1 = list(range(a, b + 1))
-    # list1 = [20, 21, 22, 23, 24]
-    sum2 = 0
-    for i in list1:
-        l = []
-        for y in str(i):
-            y2 = int(y)
-            l.append(y2)
-        if len(set(l)) == len(l):
-            sum2 = sum2 + i
-    return sum2
+    if a >= b:
+        return 0
+
+# сложить все четные числа, которые не заканчиваются на 6
+    sum1 = 0
+    for i in range(a, b + 1):
+        if i % 2 == 0 and i % 10 != 6:
+            sum1 = sum1 + i
+    return sum1
 
 
-print(summ(20, 24))
-
-
-
-
-
+print(summ(1, 36))
