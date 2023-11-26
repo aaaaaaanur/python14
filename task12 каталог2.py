@@ -14,8 +14,16 @@ catalog = {
 # если товара в наличии нет, те 0 штук - пишем "{имя_товара} нет в наличии"
 # если товара нет в каталоге - пишет "{имя товара} нет в каталоге"
 def buy(name):
-    //
+    if name not in catalog.keys():
+        print(f'Товара {name} нет в каталоге')
+        return
 
+    if catalog[name] == 0:
+        print(f'Товара {name} нет в наличии')
+
+    if catalog[name] > 0:
+        catalog[name] = catalog[name] - 1
+        print(f'Товар {name} продан')
 
 buy("костюм") # выводит "костюм продан"
 buy("рубашка") # выводит "рубашка продан"
